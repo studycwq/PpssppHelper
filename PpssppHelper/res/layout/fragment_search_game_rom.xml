@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="@string/game_library_hint"/>
+    <Spinner android:id="@+id/spn_search_game_rom_library"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:entries="@array/game_library_entries"
+	    android:spinnerMode="dropdown"
+	    />
+	<TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="@string/search_game_name_rom_hint"/>
+	<EditText android:id="@+id/et_search_game_rom_name"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:hint="@string/search_game_name_edit_hint"
+	    android:textSize="20sp"
+	    android:singleLine="true"/>
+	<Button android:id="@+id/btn_search_game_rom"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@android:string/search_go"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="30dp"
+        android:paddingLeft="30dp"
+        android:textSize="20sp"
+	    android:layout_gravity="center_horizontal"/>
+</LinearLayout>
