@@ -46,6 +46,7 @@ public class DownloadEmulatorFragment extends Fragment {
 			if (position == 0)
 				return;
 			if (mPlatforms[position].equals("IOS")) {
+				//Special handing 
 				new AlertDialog.Builder(getActivity())
 				.setMessage(R.string.ios_confirm_dialog_msg)
 				.setTitle(android.R.string.dialog_alert_title)

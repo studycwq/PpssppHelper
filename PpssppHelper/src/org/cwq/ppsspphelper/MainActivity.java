@@ -1,7 +1,5 @@
 package org.cwq.ppsspphelper;
 
-import java.util.Locale;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -161,20 +159,20 @@ public class MainActivity extends SherlockFragmentActivity {
 
 		@Override
 		public CharSequence getPageTitle(int position) {
-			Locale l = Locale.getDefault();
+			//Locale l = Locale.getDefault();
 			switch (position) {
 			case SECTION_HOME:
-				return getString(R.string.title_home).toUpperCase(l);
+				return getString(R.string.title_home);
 			case SECTION_DOWNLOAD_EMULATOR:
-				return getString(R.string.title_download_emulator).toUpperCase(l);
+				return getString(R.string.title_download_emulator);
 			case SECTION_SEARCH_GAME_ROM:
-				return getString(R.string.title_search_game_rom).toUpperCase(l);
+				return getString(R.string.title_search_game_rom);
 			case SECTION_SEARCH_GAME_ARCHIVE:
-				return getString(R.string.title_search_game_archive).toUpperCase(l);
+				return getString(R.string.title_search_game_archive);
 			case SECTION_SEARCH_GAME_GOLDFINGER:
-				return getString(R.string.title_search_game_goldfinger).toUpperCase(l);
+				return getString(R.string.title_search_game_goldfinger);
 			case SECTION_ABOUT:
-				return getString(R.string.title_about).toUpperCase(l);
+				return getString(R.string.title_about);
 			}
 			return null;
 		}

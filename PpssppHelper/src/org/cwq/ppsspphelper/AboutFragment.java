@@ -22,6 +22,7 @@ public class AboutFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
+		//Load the about page here
 		WebView webView = new WebView(getActivity().getApplicationContext());
 		webView.loadUrl("file:///android_asset/web/About.html");
 		webView.setWebViewClient(new MyWebViewClient());
@@ -33,6 +34,7 @@ public class AboutFragment extends Fragment {
 		@Override
 		public boolean shouldOverrideUrlLoading(WebView view, String url) {
 			// TODO Auto-generated method stub
+			//Handing when click hyper link action
 			Intent intent = new Intent();
 			intent.setAction(Intent.ACTION_VIEW);
 			Uri contentUri = Uri.parse(url);
