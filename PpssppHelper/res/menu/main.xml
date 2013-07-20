@@ -1,17 +1,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-<!-- 
+    
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_config"
         android:orderInCategory="100"
         android:showAsAction="ifRoom"
-        android:icon="@android:drawable/ic_menu_preferences"
-        android:title="@string/action_settings"/>
--->    
+        android:icon="@drawable/action_config"
+        android:title="@string/action_config"/>
+    
+    <item
+        android:id="@+id/action_goldfinger"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/action_goldfinger"
+        android:title="@string/action_goldfinger"/>
+    
     <item
         android:id="@+id/action_exit"
         android:orderInCategory="100"
-        android:showAsAction="ifRoom|withText"
-        android:icon="@drawable/exit"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/action_exit"
         android:title="@string/action_exit"/>
 
 </menu>

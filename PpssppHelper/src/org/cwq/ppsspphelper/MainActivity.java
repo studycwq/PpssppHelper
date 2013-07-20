@@ -1,14 +1,20 @@
 package org.cwq.ppsspphelper;
 
+import android.annotation.TargetApi;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 
@@ -21,6 +27,9 @@ public class MainActivity extends SherlockFragmentActivity {
 	public static final int SECTION_SEARCH_GAME_ARCHIVE = 3;
 	public static final int SECTION_SEARCH_GAME_GOLDFINGER = 4;
 	public static final int SECTION_ABOUT = 5;
+	
+	private boolean exitFlag = false;
+	private long lastClickBack = 0L;
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -40,6 +49,10 @@ public class MainActivity extends SherlockFragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		// Special handle for MeiZu MX2
+		supportSamrtBar();
+		
 		setContentView(R.layout.activity_main);
 
 		// Create the adapter that will return a fragment for each of the three
@@ -52,27 +65,18 @@ public class MainActivity extends SherlockFragmentActivity {
 		mViewPager.setAdapter(mSectionsPagerAdapter);
 
 	}
-
-//	@Override
-//	public boolean onCreateOptionsMenu(Menu menu) {
-//		// Inflate the menu; this adds items to the action bar if it is present.
-//		getMenuInflater().inflate(R.menu.main, menu);
-//		return true;
-//	}
-//
-//	@Override
-//	public boolean onOptionsItemSelected(MenuItem item) {
-//		// TODO Auto-generated method stub
-//		switch (item.getItemId()) {
-//		case R.id.action_exit:
-//			finish();
-//			break;
-//
-//		default:
-//			break;
-//		}
-//		return super.onOptionsItemSelected(item);
-//	}
+	
+	/**
+	 * Support MeiZu MX2 SmartBar
+	 */
+	@TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+	private void supportSamrtBar() {
+		//Build.BOARD = "mx2" Build.MODEL = "M40"
+		if(Build.BOARD.equals("mx2")){
+			getWindow().setUiOptions(ActivityInfo.UIOPTION_SPLIT_ACTION_BAR_WHEN_NARROW);
+			setTheme(android.R.style.Theme_DeviceDefault_Light);
+		}
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
@@ -91,11 +95,40 @@ public class MainActivity extends SherlockFragmentActivity {
 		case R.id.action_exit:
 			finish();
 			return true;
+		case R.id.action_config:
+			Intent intent = new Intent(MainActivity.this, ConfigPpssppActivity.class);
+			startActivity(intent);
+			return true;
 
 		default:
 			break;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public boolean dispatchKeyEvent(KeyEvent event) {
+		// TODO Auto-generated method stub
+		//double click back to exit program within 2s
+		if(event.getAction() == KeyEvent.ACTION_UP) {
+			if(event.getKeyCode() == KeyEvent.KEYCODE_BACK){
+				if(exitFlag){
+					if(System.currentTimeMillis() - lastClickBack < 2000){
+						exitFlag = false;
+						finish();
+					} else {
+						lastClickBack = System.currentTimeMillis();
+					}
+				} else {
+					exitFlag = true;
+					lastClickBack = System.currentTimeMillis();
+				}
+				if(exitFlag)
+					Toast.makeText(getApplicationContext(), R.string.double_click_exit_prompt, Toast.LENGTH_SHORT).show();
+				return true;
+			}
+		}
+		return super.dispatchKeyEvent(event);
 	}
 
 	/**

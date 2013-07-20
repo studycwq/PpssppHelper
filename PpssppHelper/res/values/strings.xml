@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">PPSSPP Helper</string>
+    <string name="app_name">PPSSPP助手</string>
     
-    <!-- 
-    <string name="action_settings">Settings</string>
-    -->
+    <!-- Menu -->
+    <string name="action_config">配置PPSSPP</string>
+    <string name="action_goldfinger">金手指管理</string>
+    <string name="action_exit">退出助手</string>
     
-    <!-- Main Acticity Fragment Title -->
-    <string name="action_exit">退出</string>
+    <!-- Titles -->
     <string name="title_home">主页</string>
     <string name="title_download_emulator">下载模拟器</string>
     <string name="title_search_game_rom">搜索游戏</string>
@@ -17,6 +17,8 @@
     
     <!-- General -->
     <string name="edit_text_null_error_msg">木有内容啊，骚年</string>
+    <string name="double_click_exit_prompt">再按一次返回键退出程序</string>
+    <string name="text_search">搜索</string>
     
     <!-- Download Emlator Start -->
     <!--
