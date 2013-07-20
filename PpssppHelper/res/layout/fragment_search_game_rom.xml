@@ -3,19 +3,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    <TextView android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="@string/game_library_hint"/>
-    <Spinner android:id="@+id/spn_search_game_rom_library"
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:entries="@array/game_library_entries"
-	    android:spinnerMode="dropdown"
-	    />
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="18sp"
+	        android:gravity="center_horizontal"
+	        android:paddingTop="10dp"
+	        android:paddingBottom="10dp"
+	        android:text="@string/game_library_hint"/>
+	    <Spinner android:id="@+id/spn_search_game_rom_library"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:entries="@array/game_library_entries"
+		    android:spinnerMode="dropdown"
+		    />
+    </LinearLayout>
 	<TextView android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:text="@string/search_game_name_rom_hint"/>
 	<EditText android:id="@+id/et_search_game_rom_name"
 	    android:layout_width="match_parent"

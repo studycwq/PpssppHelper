@@ -5,7 +5,9 @@
     android:orientation="vertical" >
     <TextView android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:textSize="18sp"
         android:text="@string/search_game_goldfinger_edit_promot"/>
     <EditText android:id="@+id/et_search_game_goldfinger_name"
@@ -27,6 +29,7 @@
     <TextView android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
+        android:paddingTop="10dp"
         android:text="@string/search_game_goldfinger_tips"/>
 
 </LinearLayout>

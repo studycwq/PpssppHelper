@@ -16,7 +16,7 @@
     <string name="title_about">关于</string>
     
     <!-- General -->
-    <string name="edit_text_null_error_msg">木有内容啊，骚年</string>
+    <string name="edit_text_null_error_msg">貌似没内容啊，骚年</string>
     
     <!-- Download Emlator Start -->
     <!--
@@ -27,16 +27,16 @@
     <string name="blackberry_version_link">http://qtness.com/ppsspp.html</string>
     <string name="symbian_version_link">http://qtness.com/ppsspp.html</string>
     -->
-    <string name="emulator_platform_prompt">请选择需要下载的平台版本：</string>
+    <string name="emulator_platform_prompt">平台版本选择：</string>
     <string-array name="emulator_platform_entries">
         <item >已支持平台</item>
         <item >PC</item>
         <item >IOS</item>
         <item >MeeGo</item>
         <item >Android</item>
+        <item >Android-CV</item>
         <item >BlackBerry</item>
         <item >Symbian</item>
-        <item >CV个人编译</item>
     </string-array>
     <string-array name="emulator_platform_values">
         <item >null</item>
@@ -44,21 +44,21 @@
         <item >cydia.angelxwind.net/</item>
         <item >http://qtness.com/ppsspp.html</item>
         <item >http://buildbot.orphis.net/ppsspp/</item>
-        <item >http://qtness.com/ppsspp.html</item>
-        <item >http://qtness.com/ppsspp.html</item>
         <item >http://pan.baidu.com/share/link?shareid=371334171&amp;uk=36121872#dir/path=/Build</item>
+        <item >http://qtness.com/ppsspp.html</item>
+        <item >http://qtness.com/ppsspp.html</item>
     </string-array>
     <string name="download_emulator_tips">提示：\n
         （1）最新的不一定最好，请自行备份版本；\n\n
         （2）官方自带中文设置路径：\n\t\t
         setting->system->language->简体中文\n\n
-        （3）CV版根据CV自己在贴吧发出的通知进行更新</string>
-    <string name="confirm_dialog_msg">是否打开%1$s版连接？</string>
+        （3）CV编译版根据CV自己在贴吧发出的通知进行更新</string>
+    <string name="confirm_dialog_msg">是否打开%1$s版链接？</string>
     <string name="ios_confirm_dialog_msg">IOS需要越狱后才能安装\n源地址：cydia.angelxwind.net/</string>
     <!-- Download Emlator End -->
     
     <!-- Search Game Rom Start -->
-    <string name="game_library_hint">请选择游戏搜索引擎\n</string>
+    <string name="game_library_hint">搜索引擎：</string>
     <string-array name="game_library_entries">
         <item >多玩游戏库</item>
         <item >电玩巴士游戏库</item>
@@ -67,8 +67,8 @@
         <item >http://tvgdb.duowan.com/psp/search/search_alias/2/s_key/%1$s</item>
         <item >http://games.tgbus.com/Default.aspx?keyword=%1$s&amp;x=-886&amp;y=-301&amp;nid=&amp;tag=</item>
     </string-array>
-    <string name="search_game_name_rom_hint">\n请输入游戏名字\n</string>
-    <string name="search_game_name_edit_hint">游戏名字</string>
+    <string name="search_game_name_rom_hint">游戏Rom下载</string>
+    <string name="search_game_name_edit_hint">在此输入游戏名</string>
     <!--  
     <string name="duowan_search_rom_link">http://tvgdb.duowan.com/psp/search/search_alias/2/s_key/%1$s</string>
     <string name="tgbus_search_rom_link">http://games.tgbus.com/Default.aspx?keyword=%1$s&amp;x=-886&amp;y=-301&amp;nid=&amp;tag=</string>
@@ -76,8 +76,8 @@
     <!-- Search Game Rom End -->
     
     <!-- Search Game Archive Start -->
-    <string name="search_game_archive_edit_promot">请输入你要下载的游戏存档：</string>
-    <string name="search_game_archive_edit_hint">游戏名字</string>
+    <string name="search_game_archive_edit_promot">游戏存档下载</string>
+    <string name="search_game_archive_edit_hint">在此输入游戏名</string>
     <string name="search_game_archive_tips">提示：\n
         （1）内置电玩巴士存档引擎，较慢请耐心等待&#8230;\n\n
         （2）游戏存档存放路径\n\t
@@ -86,11 +86,11 @@
     <!-- Search Game Archive End -->
     
     <!-- Search Game Archive Start -->
-    <string name="search_game_goldfinger_edit_promot">请输入你要下载的游戏金手指：</string>
-    <string name="search_game_goldfinger_edit_hint">游戏名字</string>
-    <string name="search_game_goldfinger_tips">提示：\n
-        	内置电玩巴士金手指引擎，较慢请耐心等待&#8230;</string>
+    <string name="search_game_goldfinger_edit_promot">游戏金手指下载</string>
+    <string name="search_game_goldfinger_edit_hint">在此输入游戏名</string>
+    <string name="search_game_goldfinger_tips">提示：\n\t
+        内置电玩巴士金手指引擎，较慢请耐心等待&#8230;</string>
     <string name="tgbus_search_goldfinger_link">http://sns.tgbus.com/cheat/psp/Index.aspx?keyword=%1$s</string>
-    <!-- Search Game Archive End -->
+   	<!-- Search Game Archive End -->
    
 </resources>

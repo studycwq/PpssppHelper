@@ -197,10 +197,10 @@ public class MainActivity extends SherlockFragmentActivity {
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_main_dummy,
+			View rootView = inflater.inflate(android.R.layout.simple_list_item_1,
 					container, false);
 			TextView dummyTextView = (TextView) rootView
-					.findViewById(R.id.section_label);
+					.findViewById(android.R.id.text1);
 			dummyTextView.setText(Integer.toString(getArguments().getInt(
 					ARG_SECTION_NUMBER)));
 			return rootView;

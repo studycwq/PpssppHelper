@@ -11,7 +11,7 @@
         android:id="@+id/action_exit"
         android:orderInCategory="100"
         android:showAsAction="ifRoom|withText"
-        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:icon="@drawable/exit"
         android:title="@string/action_exit"/>
 
 </menu>

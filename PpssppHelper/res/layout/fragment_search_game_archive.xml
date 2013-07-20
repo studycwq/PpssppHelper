@@ -5,8 +5,10 @@
     android:orientation="vertical" >
     <TextView android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:textSize="18sp"
+        android:gravity="center_horizontal"
+	    android:paddingTop="10dp"
+	    android:paddingBottom="10dp"
         android:text="@string/search_game_archive_edit_promot"/>
     <EditText android:id="@+id/et_search_game_archive_name"
         android:layout_width="match_parent"
