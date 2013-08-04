@@ -2,6 +2,9 @@
 
     <!-- These settings headers are only used on tablets. -->
 
+	<header
+        android:fragment="org.cwq.ppsspphelper.ConfigPpssppActivity$CpuPreferenceFragment"
+        android:title="@string/pref_header_cpu" />
     <header
         android:fragment="org.cwq.ppsspphelper.ConfigPpssppActivity$GeneralPreferenceFragment"
         android:title="@string/pref_header_general" />

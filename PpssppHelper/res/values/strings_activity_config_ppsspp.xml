@@ -1,28 +1,25 @@
 <resources>
 
-    <string name="title_activity_config_ppsspp">Config PPSSPP</string>
+    <string name="title_activity_config_ppsspp">PPSSPP配置</string>
 
     <!-- Strings related to Settings -->
 
-
-    <!-- Example General settings -->
-    <string name="pref_header_general">General</string>
-    <string name="pref_title_social_recommendations">Enable social recommendations</string>
-    <string name="pref_description_social_recommendations">Recommendations for people to contact based on your message history</string>
-    <string name="pref_title_display_name">Display name</string>
-    <string name="pref_default_display_name">John Smith</string>
-    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
-
-    <string-array name="pref_example_list_titles">
-        <item>Always</item>
-        <item>When possible</item>
-        <item>Never</item>
-    </string-array>
-    <string-array name="pref_example_list_values">
-        <item>1</item>
-        <item>0</item>
-        <item>-1</item>
-    </string-array>
+	<!-- CPU Settings -->
+	<string name="pref_header_cpu">CPU设置</string>
+	<string name="pref_title_jit">动态重编译 (JIT)</string>
+	<string name="pref_summary_jit_on">动态重编译已开启</string>
+	<string name="pref_summary_jit_off">动态重编译已关闭（不推荐）</string>
+	<string name="pref_title_fast_memory">快速内存访问 </string>
+	<string name="pref_summary_fast_memory_on">快速内存访问已开启（可能导致崩溃）</string>
+	<string name="pref_summary_fast_memory_off">快速内存访问已关闭</string>
+	<string name="pref_title_cpu_speed">锁定CPU速度</string>
+	<string name="pref_summary_cpu_speed">当前CPU速度设置：%1$s MHz</string>
+	<string name="pref_dialog_title_cpu_speed">CPU速度设置</string>
+	<string name="pref_dialog_msg_cpu_speed">请输入整数值（222~992），0表示不锁定</string>
+	
+    <!-- General Settings -->
+    <string name="pref_header_general">基本设置</string>
+    
 
     <!-- Example settings for Data & Sync -->
     <string name="pref_header_data_sync">Data &amp; sync</string>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <CheckBoxPreference android:key="Jit"
+        android:title="@string/pref_title_jit"
+        android:summaryOn="@string/pref_summary_jit_on"
+        android:summaryOff="@string/pref_summary_jit_off"
+        android:defaultValue="true"
+        android:disableDependentsState="false"/>
+    <CheckBoxPreference android:key="FastMemory"
+        android:title="@string/pref_title_fast_memory"
+        android:summaryOn="@string/pref_summary_fast_memory_on"
+        android:summaryOff="@string/pref_summary_fast_memory_off"
+        android:defaultValue="false"
+        android:dependency="Jit"/>
+    <EditTextPreference android:key="CPUSpeed"
+        android:title="@string/pref_title_cpu_speed"
+        android:summary="@string/pref_summary_cpu_speed"
+        android:dialogTitle="@string/pref_dialog_title_cpu_speed"
+        android:dialogMessage="@string/pref_dialog_msg_cpu_speed"
+        android:defaultValue="0"/>
+
+</PreferenceScreen>
